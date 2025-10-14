@@ -1,50 +1,272 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Risen Apps 數據守護協定</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Risen Apps 數據守護協定 / Privacy Policy</title>
   <style>
-    body { font-family: "Helvetica Neue", sans-serif; line-height: 1.8; margin: 40px; max-width: 800px; }
-    h1 { color: #222; font-size: 1.8em; }
-    h2 { color: #444; margin-top: 30px; }
-    p { color: #333; }
-    a { color: #0066cc; }
+    :root {
+      --fg: #1f2937;
+      --muted: #6b7280;
+      --brand: #0ea5e9;
+      --bg: #ffffff;
+      --card: #f9fafb;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+      margin: 0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: saturate(180%) blur(6px);
+      background: rgba(255, 255, 255, .9);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 0 0 8px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin: 28px 0 12px
+    }
+
+    p,
+    li {
+      line-height: 1.75;
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      align-items: center
+    }
+
+    .btn {
+      border: 1px solid #e5e7eb;
+      background: #fff;
+      padding: 8px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px
+    }
+
+    .btn.active {
+      border-color: var(--brand);
+      color: #0369a1;
+      box-shadow: 0 0 0 2px rgba(14, 165, 233, .15)
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 18px 18px
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      margin-top: 36px
+    }
+
+    .section {
+      margin-top: 8px
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      color: #0369a1;
+      background: rgba(14, 165, 233, .12);
+      border: 1px solid rgba(14, 165, 233, .25);
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-left: 8px
+    }
+
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
   </style>
 </head>
+
 <body>
-  <h1>數據守護協定（隱私權政策）</h1>
+  <header>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <h1>Risen Apps 數據守護協定 <span class="badge">Privacy Policy</span></h1>
+        <div class="muted">Risen Mgmt. Consulting Co., Ltd.</div>
+      </div>
+      <div class="lang-switch">
+        <button class="btn active" data-lang="zh">中文</button>
+        <button class="btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
 
-  <h2>一、引言</h2>
-  <p>感謝您使用 Risen App（房東／房客／業務）。我們重視您的個人資料與隱私安全，並依據相關法規與本協定，說明我們如何蒐集、使用、保護及管理您的資訊。</p>
+  <main class="container">
+    <!-- Chinese -->
+    <article id="zh" class="lang">
+      <div class="card">
+        <h2>一、引言</h2>
+        <p>感謝您使用 <strong>Risen
+            App（房東／房客／業務）</strong>。我們重視您的個人資料與隱私安全，並依據相關法規與本協定，說明我們如何蒐集、使用、保護及管理您的資訊。使用本應用程式，即表示您已閱讀、瞭解並同意本政策之內容。</p>
+      </div>
 
-  <h2>二、資訊收集</h2>
-  <ul>
-    <li>帳號資料：包含手機號碼、姓名（若使用者自願提供）。</li>
-    <li>驗證資訊：於登入時使用簡訊 OTP 或生物辨識驗證身分。</li>
-    <li>裝置資訊：包含作業系統版本、裝置型號、應用版本及使用時間。</li>
-    <li>操作紀錄：登入時間、通報紀錄、租賃與合約操作行為。</li>
-  </ul>
-  <p><strong>生物辨識登入說明：</strong>當您首次登入並選擇啟用生物辨識功能時，App 會於裝置端安全儲存一次性登入 Token。我們不會將任何生物特徵資料上傳或儲存於伺服器端。</p>
+      <div class="section">
+        <h2>二、資訊收集</h2>
+        <ul>
+          <li><strong>帳號資料</strong>：包含手機號碼、姓名（若使用者自願提供）。</li>
+          <li><strong>驗證資訊</strong>：於登入時使用簡訊 OTP 或生物辨識（Face ID／Touch ID）驗證身分。</li>
+          <li><strong>裝置資訊</strong>：包含作業系統版本、裝置型號、應用版本及使用時間。</li>
+          <li><strong>操作紀錄</strong>：登入時間、通報紀錄、租賃與合約操作行為。</li>
+        </ul>
+        <p><strong>生物辨識登入說明：</strong>當您首次登入並選擇啟用生物辨識功能時，App 會於裝置端安全儲存一次性登入 Token。我們不會將任何生物特徵資料上傳或儲存於伺服器端。</p>
+      </div>
 
-  <h2>三、資訊使用</h2>
-  <p>我們收集的資訊僅用於身分驗證、提供服務、客服支援與系統優化，不會用於其他目的。</p>
+      <div class="section">
+        <h2>三、資訊使用</h2>
+        <p>我們收集的資訊僅用於：身分驗證與登入、提供核心服務、客服支援、系統維運與效能優化；不作為廣告或追蹤用途。</p>
+      </div>
 
-  <h2>四、資訊共享</h2>
-  <p>我們不會出售或任意提供您的個人資料予第三方，僅於法律要求或您同意的情況下共享。</p>
+      <div class="section">
+        <h2>四、資訊共享</h2>
+        <p>我們不會出售或任意提供您的個人資料予第三方。僅在符合法令要求、或您明確同意時，才會進行必要之分享。合作夥伴均受保密義務與資料保護規範約束。</p>
+      </div>
 
-  <h2>五、您的權利</h2>
-  <p>您可隨時請求查詢、更正或刪除個人資料，並可要求停止蒐集、處理或使用。</p>
+      <div class="section">
+        <h2>五、您的權利</h2>
+        <p>您可依據適用法規，請求查詢、更正或刪除個人資料，並可要求停止蒐集、處理或使用（法定留存義務者除外）。</p>
+      </div>
 
-  <h2>六、政策更新</h2>
-  <p>若本政策有重大變更，我們將於 App 或官方網站公告通知。</p>
+      <div class="section">
+        <h2>六、政策更新</h2>
+        <p>我們可能隨服務調整或法規更新而修訂本政策；若有重大變更，將於 App 或官方網站公告。</p>
+      </div>
 
-  <h2>七、聯絡我們</h2>
-  <p>Risen Mgmt. Consulting Co., Ltd.<br>
-  📩 Email：z9955201@gmail.com<br>
-  🌐 <a href="https://risenholdings.com.tw/contact/" target="_blank">https://risenholdings.com.tw/contact/</a></p>
+      <div class="section">
+        <h2>七、聯絡我們</h2>
+        <p><strong>Risen Mgmt. Consulting Co., Ltd.</strong><br />
+          📩 Email：<a href="mailto:support@risenholdings.com.tw">support@risenholdings.com.tw</a><br />
+          🌐 網址：<a href="https://risenholdings.com.tw/contact/" target="_blank"
+            rel="noopener">https://risenholdings.com.tw/contact/</a></p>
+      </div>
 
-  <h2>八、隱私政策與服務條款</h2>
-  <p>本協定為隱私權政策之延伸，並與服務條款共同構成本應用程式的完整使用約定。</p>
+      <div class="section">
+        <h2>八、隱私政策與服務條款</h2>
+        <p>本協定為隱私權政策之延伸，並與服務條款共同構成本應用程式之完整使用約定。</p>
+      </div>
+    </article>
+
+    <!-- English -->
+    <article id="en" class="lang" style="display:none">
+      <div class="card">
+        <h2>1. Introduction</h2>
+        <p>Thank you for using <strong>Risen App (Landlord / Tenant / Agent)</strong>. We value your personal data and
+          privacy. This Privacy Policy explains how we collect, use, protect, and manage your information in accordance
+          with applicable laws and regulations. By using this application, you agree to the practices described in this
+          policy.</p>
+      </div>
+
+      <div class="section">
+        <h2>2. Information Collection</h2>
+        <ul>
+          <li><strong>Account Information</strong>: Phone number and name (if voluntarily provided).</li>
+          <li><strong>Verification Information</strong>: OTP (One-Time Password) via SMS or biometric authentication
+            (Face ID / Touch ID) for login.</li>
+          <li><strong>Device Information</strong>: OS version, device model, app version, and usage time.</li>
+          <li><strong>Activity Records</strong>: Login timestamps, report submissions, and actions related to rental and
+            contract management.</li>
+        </ul>
+        <p><strong>Biometric Login</strong>: When you first log in and enable biometric authentication, the app securely
+          stores a one-time login token on your device. We do <em>not</em> upload or store any biometric data on our
+          servers.</p>
+      </div>
+
+      <div class="section">
+        <h2>3. Information Usage</h2>
+        <p>We use the collected information solely for identity verification and login, delivering core app features,
+          customer support, and system maintenance/performance optimization. We do not use your data for advertising or
+          tracking.</p>
+      </div>
+
+      <div class="section">
+        <h2>4. Information Sharing</h2>
+        <p>We do not sell, rent, or disclose your personal data to third parties except when required by law or with
+          your explicit consent. All partners are bound by confidentiality and data-protection obligations.</p>
+      </div>
+
+      <div class="section">
+        <h2>5. Your Rights</h2>
+        <p>You may request access, correction, or deletion of your personal data, and you may request that we stop
+          collecting, processing, or using your personal data (except where retention is required by law).</p>
+      </div>
+
+      <div class="section">
+        <h2>6. Policy Updates</h2>
+        <p>We may update this policy from time to time. If there are significant changes, we will notify you within the
+          app or on our official website.</p>
+      </div>
+
+      <div class="section">
+        <h2>7. Contact Us</h2>
+        <p><strong>Risen Mgmt. Consulting Co., Ltd.</strong><br />
+          📩 Email: <a href="mailto:support@risenholdings.com.tw">support@risenholdings.com.tw</a><br />
+          🌐 Website: <a href="https://risenholdings.com.tw/contact/" target="_blank"
+            rel="noopener">https://risenholdings.com.tw/contact/</a></p>
+      </div>
+
+      <div class="section">
+        <h2>8. Privacy Policy and Terms of Service</h2>
+        <p>This agreement forms part of the overall Terms of Service for the Risen App.</p>
+      </div>
+    </article>
+
+    <footer class="container">
+      <div class="muted">© 2025 Risen Mgmt. Consulting Co., Ltd. All Rights Reserved.</div>
+      <div class="muted mono">Last updated: <span id="ts"></span></div>
+    </footer>
+  </main>
+
+  <script>
+    const zhBtn = document.querySelector('[data-lang="zh"]');
+    const enBtn = document.querySelector('[data-lang="en"]');
+    const zh = document.getElementById('zh');
+    const en = document.getElementById('en');
+    function setLang(l) {
+      if (l === 'en') { en.style.display = 'block'; zh.style.display = 'none'; enBtn.classList.add('active'); zhBtn.classList.remove('active'); document.documentElement.lang = 'en'; document.title = 'Risen Apps Privacy Policy'; }
+      else { zh.style.display = 'block'; en.style.display = 'none'; zhBtn.classList.add('active'); enBtn.classList.remove('active'); document.documentElement.lang = 'zh-TW'; document.title = 'Risen Apps 數據守護協定 / Privacy Policy'; }
+      localStorage.setItem('risen_privacy_lang', l);
+    }
+    zhBtn.addEventListener('click', () => setLang('zh'));
+    enBtn.addEventListener('click', () => setLang('en'));
+    const saved = localStorage.getItem('risen_privacy_lang') || 'zh';
+    setLang(saved);
+    document.getElementById('ts').textContent = new Date().toISOString().slice(0, 10);
+  </script>
 </body>
+
 </html>
